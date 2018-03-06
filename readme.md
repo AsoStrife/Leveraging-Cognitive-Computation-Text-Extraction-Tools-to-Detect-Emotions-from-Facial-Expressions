@@ -6,14 +6,15 @@ Our system has been validated on 35712 images annotated and extracted the Micros
 Moreover the system extracts all the Facebook public images of the logged user and classify each of them in the six classes previously mentioned.
 
 
-##Typical Scenario
+## Typical Scenario
 
 The user can decide whether to classify the image by logging in with his/her user profile through the *facebook* entry  or by uploading the image through the *upload* button. In both cases, the architecture works in the same way.
 Suppose that the user had decided to login on Facebook. The user is therefore redirected to *Facebook.com* to start  the authentication flow. After a successful log in, the user is redirected back to our server where he/she can see the last twenty five photos that he/she had uploaded on Facebook. After one or images have been chosen, a task in background starts to sent the image to the Computer Vision Services and Emotion Services to fetch the related metadata. 
 The *description tags* returned from Computer Vision are sent to our classification to predict the corresponding emotion.
 Once the computation has been completed, the user can see for that image the results of Emotion Services and the results of our classification.
 
-##Configuration
+## Configuration
+
 
 In this repository you can find all files in order to execute all project correctly. 
 
