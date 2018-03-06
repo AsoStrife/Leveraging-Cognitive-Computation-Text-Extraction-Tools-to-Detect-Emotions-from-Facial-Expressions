@@ -1,4 +1,6 @@
-# Leveraging Cognitive Computation Text Extraction Tools to Detect Emotions from Facial Expressions
+#  
+
+Leveraging Cognitive Computation Text Extraction Tools to Detect Emotions from Facial Expressions
 
 This project is a multi-class classification system that can detect whether a given image contains a face expression.  If it does, it is classified according to six possible emotions: sadness, anger, surprise, happiness, disgust, fear. 
 Microsoft Cognitive Services have been leveraged to extract tags from training and test set images and create a vectorial space using bag of word model (we employed term frequency) that has been fed to different classification algorithms. 
@@ -13,16 +15,43 @@ Suppose that the user had decided to login on Facebook. The user is therefore re
 The *description tags* returned from Computer Vision are sent to our classification to predict the corresponding emotion.
 Once the computation has been completed, the user can see for that image the results of Emotion Services and the results of our classification.
 
-## Configuration
+## Requirements
+
+You need to: 
+
+- Apache Server with PHP 7 and Mysql
+- Apache Spark Server 1.6.1 
+
+They can be in the same machine or in a different machine with different IP. 
+
+## Installation & Configuration
 
 
 In this repository you can find all files in order to execute all project correctly. 
 
 There are three main blocks: 
 
-- CodeIgniter Framework (application, css, fonts, img, js, system, index.html, .htaccess folders and files)
-- Apache Spark Rest Service (python folder)
-- Sql Dump (sql folder)
+- **CodeIgniter Framework**. In order to install the Codeigniter on your server you just copy this file on your public_html folder: 
+
+- - ./application/*
+  - ./css/*
+  - ./fonts/*
+  - ./img/*
+  - ./js/*
+  - ./system
+  - ./index.html
+  - ./.htaccess
+
+- **Apache Spark Rest Service**. In order to install this rest service just copy into your Apache Spark folder this file: 
+
+- - ./python/NaiveBayesClassifier.py
+  - ./python/service.py
+  - ./.python/data/*
+  - ./python/model/*
+
+  You have to install all import dependencies on your server. 
+
+- **Sql Dump (sql folder)**
 
 To run correctly our  application, you have to modify the following files:
 
@@ -109,6 +138,24 @@ Configuring Photos Upload
 
 In order to perform the image upload, you have to add 777 permits in the folder **./img/uploads/**
 
+Configuring ./js/main.js
+--
+If you want to create your own Apache Spark Classifier you have to change at line 91 and 96 the url/ip of the service. 
+
+Currently is setted to use our service in located at our University, but if you need to install your custom service (python folder) you have to change that line. 
+
+Line 91:
+
+```javascript
+var classificationUrl = 'http://192.167.155.71/acorriga/classifier';
+```
+Line 96:
+
+```javascript
+headers: {  'Access-Control-Allow-Origin': 'http://192.167.155.71/acorriga/classifier' }
+```
+
+
 
 
 Configuring and Run Apache Spark Web Service
@@ -118,11 +165,12 @@ In order to run correctly the python files, you have to install in your machine 
 
 We have used **Apache Spark 1.6.1**.
 
-In order to work the Rest Service you have to upload: 
+In order to work the Rest Service you have to upload (starting by ./python/ folder): 
 
 - service.py
 - NaiveBayesClassifier.py 
-- ./model/* folder
+- ./model/*
+- ./data/* 
 
 **Start Service** 
 

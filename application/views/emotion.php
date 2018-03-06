@@ -10,16 +10,16 @@
 		<div class="col-md-9">
 
 			<div class="card">
-				<div class="card-header"> Emotion (Beta) </div>
+				<div class="card-header"> Emotion </div>
 				
 				<div class="card-body">
 					<div class="row">
 						<div class="col">
-							<p>
+							<!--<p>
 								<button class="btn btn-outline-danger" id="delete-button">
 									<i class="fa fa-trash" aria-hidden="true"></i> Delete data 
 								</button>
-							</p>
+							</p>-->
 						</div> <!-- ./col pull-left  -->
 
 						<div class="col">

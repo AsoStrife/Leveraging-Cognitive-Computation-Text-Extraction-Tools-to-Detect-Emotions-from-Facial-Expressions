@@ -7,6 +7,7 @@ class Datasets{
 	public function __construct() {
 		$this->ci = get_instance();
 		$this->ci->load->model('datasets_model');
+		$this->ci->load->library('image');
 	}
 
 	/**
