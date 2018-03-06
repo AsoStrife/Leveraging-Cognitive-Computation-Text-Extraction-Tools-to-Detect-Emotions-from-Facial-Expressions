@@ -1,6 +1,4 @@
-#  
-
-Leveraging Cognitive Computation Text Extraction Tools to Detect Emotions from Facial Expressions
+# Leveraging Cognitive Computation Text Extraction Tools to Detect Emotions from Facial Expressions
 
 This project is a multi-class classification system that can detect whether a given image contains a face expression.  If it does, it is classified according to six possible emotions: sadness, anger, surprise, happiness, disgust, fear. 
 Microsoft Cognitive Services have been leveraged to extract tags from training and test set images and create a vectorial space using bag of word model (we employed term frequency) that has been fed to different classification algorithms. 
