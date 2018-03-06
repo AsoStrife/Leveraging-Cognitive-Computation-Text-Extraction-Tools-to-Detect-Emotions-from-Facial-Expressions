@@ -181,7 +181,6 @@ source venv/bin/activate --serve-in-foreground nohup python service.py &
 ps auxwww|grep -i 'python' 
 kill PID
 deactivate
-​```shell
 ```
 
 Other files are used to generate images from  Microsoft FER+ dataset, calculate the  accuracy, precision, recall, f-measure and other test. We do not provide any kind of support about that files. 
