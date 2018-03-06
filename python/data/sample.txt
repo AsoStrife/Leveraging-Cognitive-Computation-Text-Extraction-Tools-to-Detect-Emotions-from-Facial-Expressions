@@ -1,0 +1,6 @@
+anger,happy food food
+anger,dog food food
+disgust,food happy food
+disgust,food dog food
+neutral,food food happy
+neutral,food food dog
