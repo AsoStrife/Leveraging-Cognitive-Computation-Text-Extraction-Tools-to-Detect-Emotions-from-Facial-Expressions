@@ -127,7 +127,7 @@ $config['facebook_login_type']          = 'web';
 $config['facebook_login_redirect_url']  = 'home/login'; 
 $config['facebook_logout_redirect_url'] = 'home';
 $config['facebook_permissions']         = array('email', 'public_profile', 'user_photos', 'user_managed_groups');
-$config['facebook_graph_version']       = 'v2.11';
+$config['facebook_graph_version']       = 'v2.12';
 $config['facebook_auth_on_load']        = true;
 ```
 
