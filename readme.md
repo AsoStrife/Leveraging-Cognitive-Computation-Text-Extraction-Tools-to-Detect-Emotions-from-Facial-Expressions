@@ -201,4 +201,4 @@ We use some Open Source libraries:
 
 # Live Demo
 
-Our live demo is accessible at: http://are2.andreacorriga.com 
+Our live demo is not accessible anymore.
